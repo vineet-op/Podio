@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import GridPattern from "@/app/components/ui/grid-pattern";
+import Link from "next/link";
 
 export function Background() {
     return (
@@ -13,7 +14,7 @@ export function Background() {
                     Turn PDFs into Podcasts with <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">Podio!</span>
                 </p>
                 <p className="text-white font-thin text-2xl text-center w-50 text-wrap px-10">
-                    Efortlessly transform text into immersive audio for learning, work, or leisure.
+                    Effortlessly transform text into immersive audio for learning, work, or leisure.
                 </p>
             </div>
             <GridPattern
@@ -27,7 +28,9 @@ export function Background() {
                 )}
             />
             <div className="mt-20">
-                <button className="p-2 w-96  h-fit z-10 rounded-2xl text-white text-lg hover:border border-pink-500   translate-x-2 font-semibold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Convert</button>
+                <Link href={"/form"}>
+                    <button className="p-2 w-96  h-fit z-10 rounded-2xl text-white text-lg hover:border border-pink-500   translate-x-2 font-semibold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">Get Started</button>
+                </Link>
             </div>
         </div>
     );
