@@ -19,10 +19,9 @@ app.use(express.static('public'));
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log("MongoDB connected"))
-    .catch(err => console.log(err));
-
+mongoose.connect(process.env.MONGO_URL, {
+    serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
+})
 
 
 process.env.GOOGLE_APPLICATION_CREDENTIALS = 'podio.json'
